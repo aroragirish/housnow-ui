@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { InputGroup, InputLeftElement, Input } from '@chakra-ui/react';
+import { InputGroup, InputLeftElement, Input, useColorModeValue } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 
 const CustomSearchInput = ({ allData, setSearchbox, setDisplaySearchData, searchbox, dataColumn, onSearch, setGetTagValues, setGopageValue }) => {
+    const HeadingColor = useColorModeValue("secondaryGray.900", "whiteAlpha.900")
 
     const handleInputChange = (e) => {
         const searchTerm = e.target.value?.toLowerCase();

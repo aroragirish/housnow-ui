@@ -123,7 +123,7 @@ const AddDocumentModal = ({ setAddDocument, addDocument, linkId, from, setAction
                     </Box>
                     <Upload count={values.files.length} onFileSelect={(file) => setFieldValue('files', file)} />              </ModalBody>
                 <ModalFooter>
-                    <Button size="sm" variant='brand' mr={2} onClick={handleSubmit} disabled={isLoding ? true : false} >{isLoding ? <Spinner /> : 'Save'}</Button>
+                    <Button size="sm" variant='brand' bg={"#0842A0"} mr={2} onClick={handleSubmit} disabled={isLoding ? true : false} >{isLoding ? <Spinner /> : 'Save'}</Button>
                     <Button size="sm" variant="outline" colorScheme="red" onClick={() => {setAddDocument(false); resetForm()}} >Close</Button>
                 </ModalFooter>
             </ModalContent>

@@ -51,7 +51,7 @@ const MultiLeadModel = (props) => {
                         </Flex> : <LeadTable tableData={data} type='multi' selectedValues={selectedValues} setSelectedValues={setSelectedValues} columnsData={columns} title="Lead" />}
                 </ModalBody>
                 <ModalFooter>
-                    <Button variant='brand' onClick={handleSubmit} disabled={isLoding ? true : false} leftIcon={<GiClick />}> {isLoding ? <Spinner /> : 'Select'}</Button>
+                    <Button variant='brand' bg={"#0842A0"} onClick={handleSubmit} disabled={isLoding ? true : false} leftIcon={<GiClick />}> {isLoding ? <Spinner /> : 'Select'}</Button>
                     <Button onClick={() => onClose()}>Close</Button>
                 </ModalFooter>
             </ModalContent>

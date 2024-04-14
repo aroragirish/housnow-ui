@@ -21,6 +21,7 @@ const CommonCheckTable = (props) => {
     const { isLoding, title, columnData, size, dataColumn, setSearchedDataOut, tableData, state, allData, ManageGrid, deleteMany, tableCustomFields, access, action, setAction, selectedColumns, setSelectedColumns, onOpen, setDelete, selectedValues, setSelectedValues, setIsImport, checkBox, AdvanceSearch, searchDisplay, setSearchDisplay, BackButton, searchboxOutside, setGetTagValuesOutside, setSearchboxOutside } = props;
     const textColor = useColorModeValue("secondaryGray.900", "white");
     const borderColor = useColorModeValue("gray.200", "whiteAlpha.100");
+    const HeadingColor = useColorModeValue("secondaryGray.900", "whiteAlpha.900")
     const [displaySearchData, setDisplaySearchData] = useState(false);
     const [searchedData, setSearchedData] = useState([]);
     const columns = useMemo(() => dataColumn, [dataColumn]);
@@ -313,7 +314,7 @@ const CommonCheckTable = (props) => {
                     <GridItem colSpan={{ base: 12, md: 8 }} display={"flex"} alignItems={"center"}>
                         <Flex alignItems={"center"} flexWrap={"wrap"}>
                             <Text
-                                color={'secondaryGray.900'}
+                                color={HeadingColor}
                                 fontSize="22px"
                                 fontWeight="700"
                                 lineHeight="100%"
@@ -324,7 +325,7 @@ const CommonCheckTable = (props) => {
                             <CustomSearchInput setSearchbox={setSearchboxOutside ? setSearchboxOutside : setSearchbox} setDisplaySearchData={setSearchboxOutside ? props.setSearchDisplay : setDisplaySearchData} searchbox={searchboxOutside ? searchboxOutside : searchbox} allData={allData} dataColumn={columns} onSearch={handleSearch} setGetTagValues={props.setGetTagValuesOutside ? props.setGetTagValuesOutside : setGetTagValues} setGopageValue={setGopageValue} />
                             {
                                 AdvanceSearch ? AdvanceSearch : AdvanceSearch !== false &&
-                                    <Button variant="outline" colorScheme='brand' leftIcon={<SearchIcon />} mt={{ sm: "5px", md: "0" }} size="sm" onClick={() => setAdvaceSearch(true)}>Advance Search</Button>
+                                    <Button variant="outline" colorScheme='twitter'  leftIcon={<SearchIcon />} mt={{ sm: "5px", md: "0" }} size="sm" onClick={() => setAdvaceSearch(true)}>Advance Search</Button>
                             }
                             {(searchDisplay || displaySearchData) ? <Button variant="outline" colorScheme='red' size="sm" ms={2} onClick={() => handleClear()}>Clear</Button> : ""}
                             {(selectedValues?.length > 0 && access?.delete && !deleteMany) && <DeleteIcon cursor={"pointer"} onClick={() => setDelete(true)} color={'red'} ms={2} />}
@@ -364,7 +365,7 @@ const CommonCheckTable = (props) => {
                                     }
                                 </MenuList>
                             </Menu>}
-                        {(access?.create || access === true) && <Button onClick={() => handleClick()} size="sm" variant="brand" leftIcon={<AddIcon />}>Add New</Button>}
+                        {(access?.create || access === true) && <Button onClick={() => handleClick()} size="sm" variant="brand" bg={"#0842A0"} leftIcon={<AddIcon />}>Add New</Button>}
                         {BackButton && BackButton}
                     </GridItem>
                     <HStack spacing={4} mb={2}>
@@ -399,7 +400,7 @@ const CommonCheckTable = (props) => {
                                                 align="center"
                                                 justifyContent={column.center ? "center" : "start"}
                                                 fontSize={{ sm: "14px", lg: "16px" }}
-                                                color={textColor}
+                                                color={HeadingColor}
                                             >
                                                 <span style={{ textTransform: "capitalize", marginRight: "8px" }}>
                                                     {column.render("Header")}
