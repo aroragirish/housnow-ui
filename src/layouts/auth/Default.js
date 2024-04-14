@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 // Assets
 
 function AuthIllustration(props) {
-  const { children, illustrationBackground } = props;
+  const { children } = props;
   // Chakra color mode
   return (
     <Flex h='max-content'>
@@ -31,27 +31,34 @@ function AuthIllustration(props) {
         <Box
           display={{ base: "none", md: "flex" }}
           h='100%'
+          
           minH='100vh'
           w={{ lg: "50vw", "2xl": "44vw" }}
           borderBottomLeftRadius={{ lg: "120px", xl: "200px" }}
-          justifyContent='center'
+          justifyContent='left'
           position='absolute'
-          flexDirection={'column'}
+          flexDirection={'row'}
           alignItems={'center'}
           // bg={'black'}
           overflow={'hidden'}
           right='0px'>
-          <Link to="https://prolinkinfotech.com/" target="_blank" style={{ height: '50%', width: '50%' }} >
+            
+            <Box
+              w="1px"     // Width of the vertical line
+              h="75%"    // Height of the vertical line
+              bg="gray.300" // Color of the vertical line
+              ml="20px"   // Left margin (adjust as needed)
+              mr="20px"   // Right margin (adjust as needed)
+            />
             <Flex
-              bg={`url(${illustrationBackground})`}
+              bg={`url(${'/images/housnow.png'})`}
               justify='center'
               align='center'
-              w='100%'
-              h='100%'
+              w='75%'
+              h='75%'
               bgSize='cover'
               bgPosition='50%'
             />
-          </Link>
           {/* <Box
             border={'1px solid'}
             p={4}

@@ -14,7 +14,7 @@ export function SidebarLinks(props) {
   let activeIcon = useColorModeValue("brand.600", "white");
   let textColor = useColorModeValue("secondaryGray.500", "white");
   let brandColor = useColorModeValue("brand.500", "brand.400");
-  let sidebarBgColor = useColorModeValue("gray.200", "brand.200");
+  let sidebarBgColor = useColorModeValue("gray.200", "#0842A0");
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const user = JSON.parse(localStorage.getItem("user"))

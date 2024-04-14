@@ -35,9 +35,11 @@ import { setUser } from "../../../redux/localSlice";
 
 function SignIn() {
   // Chakra color mode
-  const textColor = useColorModeValue("navy.700", "white");
+  const textColor = useColorModeValue("brand.700", "white");
   const textColorSecondary = "gray.400";
-  const brandStars = useColorModeValue("brand.500", "brand.400");
+  const brandStars = useColorModeValue("brand.500", "#0842A0");
+  const bgColor = useColorModeValue("#F5F8FD", "#0D2136");
+
   const [isLoding, setIsLoding] = React.useState(false);
   const [checkBox, setCheckBox] = React.useState(true);
 
@@ -95,9 +97,24 @@ function SignIn() {
 
   return (
     <DefaultAuth
-      illustrationBackground={image?.length > 0 && image[0]?.authImg}
-      image={image?.length > 0 && image[0]?.authImg}
     >
+      <Box
+        as="section"
+        maxW={{ base: "100%", md: "max-content" }}
+        w="100%"
+        mx={{ base: "auto", lg: "0px" }}
+        me="auto"
+        h="fit-content"
+        alignItems="start"
+        justifyContent="center"
+        mb={{ base: "30px", md: "60px" }}
+        px={{ base: "25px", md: "40px" }} // Adjusted padding for mobile/desktop
+        mt={{ base: "40px", md: "14vh" }}
+        bg={bgColor}
+        flexDirection="column"
+        boxShadow="0 0 10px rgba(0, 0, 0, 0.05)" // Subtle box shadow
+        borderRadius="15px" // Rounded corners
+      >
       <Flex
         maxW={{ base: "100%", md: "max-content" }}
         w="100%"
@@ -252,7 +269,7 @@ function SignIn() {
               ></Flex>
               <Button
                 fontSize="sm"
-                variant="brand"
+                variant="solid"
                 fontWeight="500"
                 w="100%"
                 h="50"
@@ -266,6 +283,7 @@ function SignIn() {
           </form>
         </Flex>
       </Flex>
+      </Box>
     </DefaultAuth>
   );
 }

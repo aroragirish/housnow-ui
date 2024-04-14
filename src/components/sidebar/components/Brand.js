@@ -19,7 +19,6 @@ export function SidebarBrand(props) {
       position: "sticky",
       top: "0",
       left: "0",
-      background: "#fff",
 
     }}>
       <Flex>
@@ -32,7 +31,7 @@ export function SidebarBrand(props) {
           userSelect="none"
           my={2}
         /> : <Heading my={4}
-          cursor={"pointer"} onClick={() => !from && setOpenSidebar(!openSidebar)} userSelect={"none"}>{openSidebar === true ? "Prolink" : "Pr"}</Heading>}
+          cursor={"pointer"} onClick={() => !from && setOpenSidebar(!openSidebar)} userSelect={"none"}>{openSidebar === true ? "Housnow" : "HN"}</Heading>}
       </Flex>
 
     </Flex>

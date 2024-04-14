@@ -12,7 +12,7 @@ export const inputStyles = {
       variants: {
         main: (props) => ({
           field: {
-            bg: mode("transparent", "navy.800")(props),
+            bg: mode("transparent", "#0D2136")(props),
             border: "1px solid",
             color: mode("secondaryGray.900", "white")(props),
             borderColor: mode("secondaryGray.100", "whiteAlpha.100")(props),
@@ -113,7 +113,7 @@ export const inputStyles = {
       variants: {
         main: (props) => ({
           field: {
-            bg: mode("transparent", "navy.800")(props),
+            bg: mode("transparent", "#0D2136")(props),
             border: "1px solid",
             color: "secondaryGray.600",
             borderColor: mode("secondaryGray.100", "whiteAlpha.100")(props),
@@ -126,7 +126,7 @@ export const inputStyles = {
         }),
         mini: (props) => ({
           field: {
-            bg: mode("transparent", "navy.800")(props),
+            bg: mode("transparent", "#0D2136")(props),
             border: "0px solid transparent",
             fontSize: "0px",
             p: "10px",

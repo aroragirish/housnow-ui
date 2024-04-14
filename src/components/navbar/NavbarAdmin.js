@@ -23,13 +23,13 @@ export default function AdminNavbar(props) {
 	const { secondary, message, brandText, under, setOpenSidebar, openSidebar, largeLogo, routes } = props;
 
 	// Here are all the props that may change depending on navbar's type or state.(secondary, variant, scrolled)
-	let mainText = useColorModeValue('navy.700', 'white');
+	let mainText = useColorModeValue('#031525', 'white');
 	let secondaryText = useColorModeValue('gray.700', 'white');
 	let navbarPosition = 'fixed';
 	let navbarFilter = 'none';
 	let navbarBackdrop = 'blur(20px)';
 	let navbarShadow = 'none';
-	let navbarBg = useColorModeValue('#fff', 'rgba(11,20,55,0.5)');
+	let navbarBg = useColorModeValue('#fff', '#031525');
 	let navbarBorder = 'transparent';
 	let secondaryMargin = '-9px';
 	let paddingX = '15px';
@@ -149,7 +149,7 @@ export default function AdminNavbar(props) {
 							userSelect="none"
 							my={2}
 						/> : <Heading my={4}
-							cursor={"pointer"} userSelect={"none"}>{openSidebar === true ? "Prolink" : "Pr"}</Heading>}
+							cursor={"pointer"} userSelect={"none"}>{openSidebar === true ? "Housnow" : "HN"}</Heading>}
 					</Link>
 
 					<Link

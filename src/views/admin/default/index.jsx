@@ -235,7 +235,7 @@ export default function UserReports() {
             !isLoding ?
               data && data.length > 0 && data?.map((item, i) => (
                 <>
-                  <Box border={"1px solid #e5e5e5"} p={2} m={1} cursor={'pointer'} key={i} onClick={() => navigate(navigateTo[item.name])}>
+                  <Box p={2} m={1} cursor={'pointer'} key={i} onClick={() => navigate(navigateTo[item.name])}>
                     <Flex justifyContent={"space-between"}>
                       <Text fontSize="sm" fontWeight={600} pb={2}>{item?.name}</Text>
                       <Text fontSize="sm" fontWeight={600} pb={2}><CountUpComponent targetNumber={item?.length} /></Text>

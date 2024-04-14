@@ -32,13 +32,13 @@ export default function HeaderLinks(props) {
 	const { secondary, setOpenSidebar, openSidebar, routes } = props;
 	// Chakra Color Mode
 	const navbarIcon = useColorModeValue("gray.400", "white");
-	let menuBg = useColorModeValue("white", "navy.800");
+	let menuBg = useColorModeValue("white", "#0D2136");
 	const textColor = useColorModeValue("secondaryGray.900", "white");
 	const textColorBrand = useColorModeValue("brand.700", "brand.400");
 	const ethColor = useColorModeValue("gray.700", "white");
 	const borderColor = useColorModeValue("#E6ECFA", "rgba(135, 140, 189, 0.3)");
-	const ethBg = useColorModeValue("secondaryGray.300", "navy.900");
-	const ethBox = useColorModeValue("white", "navy.800");
+	const ethBg = useColorModeValue("secondaryGray.300", "#031525");
+	const ethBox = useColorModeValue("white", "#0D2136");
 	const shadow = useColorModeValue(
 		"14px 17px 40px 4px rgba(112, 144, 176, 0.18)",
 		"14px 17px 40px 4px rgba(112, 144, 176, 0.06)"
@@ -222,7 +222,7 @@ export default function HeaderLinks(props) {
 					<Avatar
 						_hover={{ cursor: "pointer" }}
 						color="white"
-						name={user || "Prolink Infotech"}
+						name={user || "Housnow"}
 						bg="#11047A"
 						size="sm"
 						w="40px"

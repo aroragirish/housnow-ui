@@ -32,6 +32,7 @@ export default function ContactTable(props) {
   const data = useMemo(() => tableData, [tableData]);
   const user = JSON.parse(localStorage.getItem("user"))
   const [gopageValue, setGopageValue] = useState()
+  const head = useColorModeValue("secondaryGray.900", "white");
 
   const tableInstance = useTable(
     {
@@ -119,7 +120,7 @@ export default function ContactTable(props) {
                       align="center"
                       justifyContent={column.center ? "center" : "start"}
                       fontSize={{ sm: "14px", lg: "16px" }}
-                      color=" secondaryGray.900"
+                      color={head}
                     >
                       <span style={{ textTransform: "capitalize", marginRight: "8px" }}>
                         {column.render("Header")}

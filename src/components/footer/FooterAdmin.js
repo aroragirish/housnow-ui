@@ -28,23 +28,7 @@ export default function Footer() {
       justifyContent='space-between'
       px={{ base: "30px", md: "50px" }}
       pb='30px'>
-      <Text
-        color={textColor}
-        textAlign={{
-          base: "center",
-          xl: "start",
-        }}
-        mb={{ base: "20px", xl: "0px" }}>
-        {" "}
-        &copy; {1900 + new Date().getYear()}
-        <Text as='span' fontWeight='500' ms='4px'>
-          <Link
-            fontWeight='500'
-            color={textColor}
-            target="_blank"
-            href='https://prolinkinfotech.com/'> Prolink Infotech.</Link> All Rights Reserved.
-        </Text>
-      </Text>
+      
       {/* <List display='flex'>
         <ListItem
           me={{

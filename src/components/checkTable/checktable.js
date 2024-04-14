@@ -399,7 +399,7 @@ const CommonCheckTable = (props) => {
                                                 align="center"
                                                 justifyContent={column.center ? "center" : "start"}
                                                 fontSize={{ sm: "14px", lg: "16px" }}
-                                                color="secondaryGray.900"
+                                                color={textColor}
                                             >
                                                 <span style={{ textTransform: "capitalize", marginRight: "8px" }}>
                                                     {column.render("Header")}

@@ -40,7 +40,7 @@ export default function Auth({ setIsLogin }) {
     });
   };
 
-  const authBg = useColorModeValue("white", "navy.900");
+  const authBg = useColorModeValue("white", "#031525");
   document.documentElement.dir = "ltr";
   return (
     <Box>
